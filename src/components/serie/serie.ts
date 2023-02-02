@@ -1,12 +1,10 @@
 import { SerieStructure } from '../../models/serieStructure';
 import { Component } from '../component/component';
 
-export class Serie extends Component {
+export class SerieComponent extends Component {
   constructor(
     public selector: string,
-    public serie: SerieStructure,
-    public deleteSerie: (id: SerieStructure['id']) => void,
-    public updateSerie: (serie: SerieStructure) => void
+    public serie: SerieStructure //public deleteSerie: (id: SerieStructure['id']) => void, //public updateSerie: (serie: SerieStructure) => void
   ) {
     super();
     this.serie = { ...serie };
@@ -16,7 +14,7 @@ export class Serie extends Component {
 
   render(place: globalThis.InsertPosition) {
     super.render(place);
-    document
+    /*document
       .querySelector(`#d${this.serie.id}`)
       ?.addEventListener('click', () => {
         this.deleteSerie(this.serie.id);
@@ -26,7 +24,7 @@ export class Serie extends Component {
       ?.addEventListener('click', () => {
         this.serie.watched = true;
         this.updateSerie(this.serie);
-      });
+      });*/
   }
 
   createTemplate() {
@@ -55,7 +53,7 @@ export class Serie extends Component {
           </li>
           </ul>
           <i class="fas fa-times-circle icon--delete id="d${this.serie.id}" title="delete-button"></i>
-        </li>s
+        </li>
 `;
   }
 }
