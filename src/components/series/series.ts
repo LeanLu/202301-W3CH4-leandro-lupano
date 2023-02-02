@@ -34,14 +34,14 @@ export class Series extends Component {
 
     // new Add('.series-list--watched', this.addSerie.bind(this));
 
-    this.series.forEach((item) => {
+    /* this.series.forEach((item) => {
       new SerieComponent(
         '.series-watched>ul',
         item,
         this.deleteSerie.bind(this),
         this.updateSerie.bind(this)
       );
-    });
+    });*/
   }
 
   createTemplate() {
