@@ -1,4 +1,4 @@
-import { SerieStructure } from '../models/serie';
+import { SerieStructure } from '../models/serieStructure';
 
 export const SERIE: SerieStructure[] = [
   {
